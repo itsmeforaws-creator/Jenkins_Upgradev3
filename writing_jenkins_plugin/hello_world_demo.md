@@ -69,6 +69,11 @@ Quick meaning of others (so you know)
 mvn verify
 mvn package
 
+if fail then install following:
+sudo apt install openjdk-17-jdk -y
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+mvn clean install
+
 Move .hpi file from targets to Jenkins Plugin Directory
 Retstart the Jenkins Service
 
