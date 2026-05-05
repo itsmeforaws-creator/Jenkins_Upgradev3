@@ -29,6 +29,43 @@ cd hello-world
 # Create a plugin from the Jenkins templates:
 mvn -U archetype:generate -Dfilter="io.jenkins.archetypes:"
 
+| Part                  | Meaning                |
+| --------------------- | ---------------------- |
+| mvn                   | Maven tool             |
+| -U                    | Force update           |
+| archetype:generate    | Create project         |
+| -Dfilter              | Filter templates       |
+| io.jenkins.archetypes | Jenkins templates only |
+
+Breakdown
+mvn
+Runs Apache Maven (a tool for building Java projects)
+-U
+Forces Maven to download the latest updates (no old cached data)
+archetype:generate
+Used to create a new project from a template
+-Dfilter="io.jenkins.archetypes:"
+Filters the templates and shows only Jenkins-related templates
+🔸 What happens when you run it?
+Maven fetches the latest templates
+It shows only Jenkins project templates
+You choose one (like a Jenkins plugin template)
+Maven generates a ready-to-use project for you
+-----------------------------------
+Quick meaning of others (so you know)
+1 → empty-plugin
+👉 Blank project (no example)
+❌ Not good for beginners
+2 → global-configuration-plugin
+👉 For plugins with settings in Jenkins UI
+3 → global-shared-library
+👉 For Jenkins Pipeline shared libraries
+3 → hello-world-plugin ✅ (Best for beginners)
+5 → scripted-pipeline
+👉 For testing pipeline scripts
+6 → theme-plugin
+👉 For changing Jenkins UI theme
+
 mvn verify
 mvn package
 
