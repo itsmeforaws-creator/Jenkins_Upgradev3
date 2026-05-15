@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Define environment variables here
-        MY_ENV_VAR = 'Custom Value'
+        MY_ENV_VAR = 'Production'
     }
 
     stages {
